@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :user, controllers: {
-    confirmations: 'user/confirmations',
-    passwords:     'user/passwords',
-    sessions:      'user/sessions',
-    unlocks:       'user/unlocks',
-    registrations: 'user/registrations'
+    confirmations: "user/confirmations",
+    passwords:     "user/passwords",
+    sessions:      "user/sessions",
+    unlocks:       "user/unlocks",
+    registrations: "user/registrations"
   }
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
