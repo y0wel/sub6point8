@@ -1,0 +1,5 @@
+<h2>User Dashboard</h2>
+
+<%= form_with url: destroy_user_session_path, method: :delete, local: true do %>
+<%= submit_tag "Sign Out" %>
+<% end %>
