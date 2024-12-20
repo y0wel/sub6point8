@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     unauthenticated :user do
-      match '*path' => redirect('/'), via: :get
+      match "*path" => redirect("/"), via: :get
     end
   end
 
