@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   devise_for :user, controllers: {
     confirmations: "user/confirmations",
-    passwords:     "user/passwords",
     sessions:      "user/sessions",
-    unlocks:       "user/unlocks",
     registrations: "user/registrations"
   }
+
+  devise_scope :user do
+    unauthenticated :user do
+      match '*path' => redirect('/'), via: :get
+    end
+  end
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
