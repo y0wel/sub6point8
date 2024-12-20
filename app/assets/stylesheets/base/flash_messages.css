@@ -1,0 +1,7 @@
+.flash-message.notice {
+  @apply bg-green-100 border-green-300 text-green-800;
+}
+
+.flash-message.alert {
+  @apply bg-red-100 border-red-300 text-red-800;
+}
