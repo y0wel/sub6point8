@@ -112,6 +112,11 @@ GEM
     diff-lcs (1.5.1)
     drb (2.2.1)
     erubi (1.13.0)
+    factory_bot (6.5.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.4.4)
+      factory_bot (~> 6.5)
+      railties (>= 5.0.0)
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
     formatador (1.1.0)
@@ -282,6 +287,8 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.33.0)
       parser (>= 3.3.1.0)
+    rubocop-factory_bot (2.26.1)
+      rubocop (~> 1.61)
     rubocop-minitest (0.36.0)
       rubocop (>= 1.61, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
@@ -359,6 +366,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  factory_bot_rails
   guard-rspec
   importmap-rails
   jbuilder
@@ -367,6 +375,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 8.0.1)
   rspec-rails
+  rubocop-factory_bot
   rubocop-rails-omakase
   selenium-webdriver
   sprockets-rails
