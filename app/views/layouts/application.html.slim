@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Sub6Point8
+    meta content="text/html; charset=UTF-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = yield :head
+
+    link rel="manifest" href="/manifest.json"
+    link rel="icon" href="/icon.png" type="image/png"
+    link rel="icon" href="/icon.svg" type="image/svg+xml"
+    link rel="apple-touch-icon" href="/icon.png"
+    = stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload"
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+
+  body
+    - flash.each do |key, message|
+      .flash-message class="#{key} fixed top-5 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-gray-300 px-4 py-3 rounded-md shadow-lg"
+        = message
+    main.container.mx-auto.px-5.flex.flex-col.items-center.justify-center.min-h-screen
+      = yield
